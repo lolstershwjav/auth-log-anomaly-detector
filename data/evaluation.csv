@@ -1,0 +1,6 @@
+user,window_start,failed_logins,unique_ips,off_hours_logins,successful_logins
+user01,2026-11-10T08:00:00Z,1,2,0,8
+user02,2026-11-10T09:00:00Z,0,1,0,6
+user03,2026-11-10T10:00:00Z,95,32,43,0
+user04,2026-11-10T11:00:00Z,1,1,1,5
+user05,2026-11-10T12:00:00Z,67,24,30,1
