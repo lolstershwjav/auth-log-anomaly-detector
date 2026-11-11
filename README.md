@@ -14,6 +14,13 @@ pytest -q
 
 The CSV files contain **synthetic data only**. Lower model scores indicate more unusual activity. The model is an unsupervised triage aid, not proof of compromise. A conservative baseline-range guard flags unusually large counts that Isolation Forest might miss.
 
+## How it works
+
+1. Validate the synthetic baseline and evaluation CSVs against the same input schema.
+2. Train Isolation Forest on hourly authentication summaries in the baseline.
+3. Score evaluation windows using four signals: failed logins, distinct source IPs, off-hours logins, and successful logins.
+4. Write findings as JSON for review. Inspect the underlying activity before escalating an alert.
+
 ## Input schema
 
 `user,window_start,failed_logins,unique_ips,off_hours_logins,successful_logins`
